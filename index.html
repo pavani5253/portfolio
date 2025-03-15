@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavani Tamadapu - Portfolio</title>
+    <link rel="stylesheet" href="new.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav>
+        <ul>
+            <li onclick="showSection('home')">Home</li>
+            <li onclick="showSection('internships')">Internships</li>
+            <li onclick="showSection('workshops')">Workshops</li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h1>Pavani Tamadapu</h1>
+        <p>Motivated B.Tech student with expertise in full-stack development.</p>
+        
+        <div class="home-menu">
+            <button onclick="showSubSection('about')">Profile Summary</button>
+            <button onclick="showSubSection('education')">Education</button>
+            <button onclick="showSubSection('skills')">Skills</button>
+            <button onclick="showSubSection('languages')">Languages</button>
+            <button onclick="showSubSection('contact')">Contact</button>
+        </div>
+
+        <div id="home-content">
+            <div id="about" class="sub-section">
+                <p>
+                    Motivated B.Tech student with a growing expertise in full-stack development, proficient in C, Python, Java, JavaScript, HTML, and the MERN stack 
+                    (MongoDB, Express.js, React, Node.js). Gained hands-on experience through internships in cybersecurity, cloud networking, and AI. 
+                    Strong problem-solving, communication, and time management skills, eager to contribute to software projects and further develop as a software engineer.
+                </p>
+            </div>
+
+            <div id="education" class="sub-section">
+                <ul>
+                    <li onclick="toggleSkillSection('cic')"><b>B.Tech:</b> Sasi Institute of Technology (2022-2026)</li>
+                    <li><b>Intermediate:</b> Aditya Junior College (2020-2022)</li>
+                    <li><b>SSC:</b> Bhashyam English Medium School (2019-2020)</li>
+                </ul>
+            </div>
+
+            <div id="cic" class="sub-section">
+                <ul>
+                    <li>CIC (Cyber Security and Internet of Things Including Blockchain Technology)</li>
+                </ul>
+            </div>
+
+            <div id="skills" class="sub-section">
+                <button class="toggle-btn" onclick="toggleSkillSection('technical-skills')">Technical Skills</button>
+                <div id="technical-skills" class="skill-content">
+                    <ul>
+                        <li>Programming: C, Python, Java, HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+
+                <button class="toggle-btn" onclick="toggleSkillSection('soft-skills')">Soft Skills</button>
+                <div id="soft-skills" class="skill-content">
+                    <ul>
+                        <li>Problem-Solving</li>
+                        <li>Critical Thinking</li>
+                        <li>Time Management</li>
+                        <li>Communication</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="languages" class="sub-section">
+                <ul>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Telugu</li>
+                </ul>
+
+                <div class="languages-container">
+                    <div class="language">
+                        <p>English</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                        <p class="lang-level">Advanced</p>
+                    </div>
+
+                    <div class="language">
+                        <p>Telugu</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%;"></div>
+                        </div>
+                        <p class="lang-level">Fluent</p>
+                    </div>
+
+                    <div class="language">
+                        <p>Hindi</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                        <p class="lang-level">Moderate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="sub-section">
+                <ul>
+                    <li>Email: <a href="mailto:pavani.tamadapu18@gmail.com">pavani.tamadapu18@gmail.com</a></li>
+                    <li>Phone: <a href="tel:+918106033855">8106033855</a></li>
+                    <li>GitHub: <a href="https://github.com/pavani5253" target="_blank">GitHub profile</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/pavani-tamadapu-60989528a" target="_blank">LinkedIn Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships">
+        <h2>Internships</h2>
+        <ul>
+            <li onclick="showDetails('intern-palo')">Palo Alto Cybersecurity (Eduskills)</li>
+            <li onclick="showDetails('intern-juniper')">Juniper Networking Cloud (Eduskills)</li>
+            <li onclick="showDetails('intern-ai')">AI Internship (Skilldizire)</li>
+        </ul>
+        <div id="internship-details"></div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section id="workshops">
+        <h2>Workshops</h2>
+        <ul>
+            <li onclick="showDetails('workshop-iot')">IoT & Machine Learning (Spypro Security)</li>
+        </ul>
+        <div id="workshop-details"></div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="config.js"></script>
+
+</body>
+</html>

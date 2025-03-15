@@ -1,0 +1,670 @@
+/* General Styles */
+body {
+font-family: &#39;Poppins&#39;, sans-serif;
+
+background: radial-gradient(circle, #0d0d0d, #1a1a1a);
+color: white; /* Dark Charcoal for text */
+text-align: center;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+/* Navigation */
+nav {
+display: flex;
+justify-content: space-between;
+padding: 15px;
+background: rgba(0, 0, 0, 0.8);
+box-shadow: 0 0 10px cyan;
+transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+padding: 0;
+}
+nav ul li {
+cursor: pointer;
+font-size: 18px;
+font-weight: bold;
+transition: color 0.3s, transform 0.2s;
+}
+nav ul li:hover {
+color: cyan;
+transform: scale(1.1);
+}
+/* Section Styling */
+section {
+
+display: none;
+padding: 50px 10px;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.active {
+display: block;
+opacity: 1;
+transform: translateY(0);
+}
+/* Home Section */
+h1 {
+font-size: 50px;
+font-weight: bold;
+text-transform: uppercase;
+background: linear-gradient(90deg, cyan, blue);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 10px cyan;
+}
+/* Buttons */
+button {
+background: cyan;
+color: black;
+padding: 12px 20px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+transition: all 0.3s ease;
+box-shadow: 0 0 8px cyan;
+}
+button:hover {
+background: blue;
+
+box-shadow: 0 0 15px blue;
+color: white;
+}
+/* Click-to-Reveal Content */
+.sub-section {
+display: none;/* General Styles */
+body {
+font-family: &#39;Poppins&#39;, sans-serif;
+
+background: radial-gradient(circle, #0d0d0d, #1a1a1a);
+color: white; /* Dark Charcoal for text */
+text-align: center;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+/* Navigation */
+nav {
+display: flex;
+justify-content: space-between;
+padding: 15px;
+background: rgba(0, 0, 0, 0.8);
+box-shadow: 0 0 10px cyan;
+transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+padding: 0;
+}
+nav ul li {
+cursor: pointer;
+font-size: 18px;
+font-weight: bold;
+transition: color 0.3s, transform 0.2s;
+}
+nav ul li:hover {
+color: cyan;
+transform: scale(1.1);
+}
+/* Section Styling */
+section {
+
+display: none;
+padding: 50px 10px;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.active {
+display: block;
+opacity: 1;
+transform: translateY(0);
+}
+/* Home Section */
+h1 {
+font-size: 50px;
+font-weight: bold;
+text-transform: uppercase;
+background: linear-gradient(90deg, cyan, blue);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 10px cyan;
+}
+/* Buttons */
+button {
+background: cyan;
+color: black;
+padding: 12px 20px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+transition: all 0.3s ease;
+box-shadow: 0 0 8px cyan;
+}
+button:hover {
+background: blue;
+
+box-shadow: 0 0 15px blue;
+color: white;
+}
+/* Click-to-Reveal Content */
+.sub-section {
+display: none;
+margin-top: 20px;
+padding: 15px;
+border: 1px solid cyan;
+box-shadow: 0 0 10px cyan;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+width: 60%; /* Limit width to 60% of screen */
+max-width: 600px; /* Prevent it from becoming too wide on larger screens */
+margin-left: auto;
+margin-right: auto; /* Center align */
+text-align: left; /* Improve readability */
+}
+/* Adjust subsection text */
+.sub-section p, .sub-section ul {
+font-size: 14px; /* Reduce font size */
+line-height: 1.5; /* Improve readability */
+}
+/* Dark Mode */
+/* Softer Light Mode */
+.dark-mode {
+background: linear-gradient(180deg, #f2f2f2, #e6e6e6); /* Soft grayish-white */
+color: #222; /* Darker text for contrast */
+}
+/* Adjust Navigation for Light Mode */
+.dark-mode nav {
+background: rgba(245, 245, 245, 0.9);
+box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+}
+
+/* Adjust Headings for Visibility */
+.dark-mode h1 {
+background: linear-gradient(90deg, #ff6600, #ff3300);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* Adjust Buttons in Light Mode */
+.dark-mode button {
+background: #ff6600; /* Soft warm orange */
+color: white;
+box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+}
+.dark-mode button:hover {
+background: #ff3300;
+box-shadow: 0 0 15px rgba(255, 51, 0, 0.6);
+}
+/* Adjust Subsections */
+.dark-mode .sub-section {
+background: rgba(250, 250, 250, 0.95);
+border: 1px solid #ff6600;
+box-shadow: 0 0 10px rgba(255, 102, 0, 0.4);
+color: #222;
+}
+/* Links in Light Mode */
+.dark-mode a {
+color: #b33; /* Dark red */
+text-decoration: none;
+transition: color 0.3s;
+}
+.dark-mode a:hover {
+color: red;
+text-decoration: underline;
+}
+/* Remove old static grid */
+
+body::before {
+content: none;
+}
+/* Add a full-screen particle effect */
+#particles-js {
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: -1;
+}
+/* Skills Toggle Buttons */
+.toggle-btn {
+background: cyan;
+color: black;
+padding: 10px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+margin: 10px 0;
+display: block;
+width: 100%;
+text-align: center;
+transition: background 0.3s ease;
+box-shadow: 0 0 8px cyan;
+}
+.toggle-btn:hover {
+background: blue;
+color: white;
+box-shadow: 0 0 15px blue;
+}
+.skill-content {
+display: none;
+padding: 10px;
+border: 1px solid cyan;
+
+box-shadow: 0 0 10px cyan;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+}
+/* Languages Section */
+.languages-container {
+display: flex;
+flex-direction: column;
+gap: 15px;
+width: 80%;
+margin: auto;
+}
+.language {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.progress-bar {
+width: 100%;
+height: 10px;
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+}
+.progress {
+height: 100%;
+background: linear-gradient(90deg, #ff007f, #ff6600, #00d4ff);
+transition: width 1.5s ease-in-out;
+border-radius: 10px;
+}
+.lang-level {
+font-size: 14px;
+color: white;
+
+margin-top: 5px;
+}
+/* Fix for long text (like email) overflowing */
+#contact ul {
+word-wrap: break-word;
+overflow-wrap: break-word;
+white-space: normal; /* Allow text to wrap */
+max-width: 90%; /* Prevent stretching */
+margin: auto; /* Center align */
+}/* General Styles */
+body {
+font-family: &#39;Poppins&#39;, sans-serif;
+
+background: radial-gradient(circle, #0d0d0d, #1a1a1a);
+color: white; /* Dark Charcoal for text */
+text-align: center;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+/* Navigation */
+nav {
+display: flex;
+justify-content: space-between;
+padding: 15px;
+background: rgba(0, 0, 0, 0.8);
+box-shadow: 0 0 10px cyan;
+transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+padding: 0;
+}
+nav ul li {
+cursor: pointer;
+font-size: 18px;
+font-weight: bold;
+transition: color 0.3s, transform 0.2s;
+}
+nav ul li:hover {
+color: cyan;
+transform: scale(1.1);
+}
+/* Section Styling */
+section {
+
+display: none;
+padding: 50px 10px;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.active {
+display: block;
+opacity: 1;
+transform: translateY(0);
+}
+/* Home Section */
+h1 {
+font-size: 50px;
+font-weight: bold;
+text-transform: uppercase;
+background: linear-gradient(90deg, cyan, blue);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 10px cyan;
+}
+/* Buttons */
+button {
+background: cyan;
+color: black;
+padding: 12px 20px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+transition: all 0.3s ease;
+box-shadow: 0 0 8px cyan;
+}
+button:hover {
+background: blue;
+
+box-shadow: 0 0 15px blue;
+color: white;
+}
+/* Click-to-Reveal Content */
+.sub-section {
+display: none;
+margin-top: 20px;
+padding: 15px;
+border: 1px solid cyan;
+box-shadow: 0 0 10px cyan;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+width: 60%; /* Limit width to 60% of screen */
+max-width: 600px; /* Prevent it from becoming too wide on larger screens */
+margin-left: auto;
+margin-right: auto; /* Center align */
+text-align: left; /* Improve readability */
+}
+/* Adjust subsection text */
+.sub-section p, .sub-section ul {
+font-size: 14px; /* Reduce font size */
+line-height: 1.5; /* Improve readability */
+}
+/* Dark Mode */
+/* Softer Light Mode */
+.dark-mode {
+background: linear-gradient(180deg, #f2f2f2, #e6e6e6); /* Soft grayish-white */
+color: #222; /* Darker text for contrast */
+}
+/* Adjust Navigation for Light Mode */
+.dark-mode nav {
+background: rgba(245, 245, 245, 0.9);
+box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+}
+
+/* Adjust Headings for Visibility */
+.dark-mode h1 {
+background: linear-gradient(90deg, #ff6600, #ff3300);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* Adjust Buttons in Light Mode */
+.dark-mode button {
+background: #ff6600; /* Soft warm orange */
+color: white;
+box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+}
+.dark-mode button:hover {
+background: #ff3300;
+box-shadow: 0 0 15px rgba(255, 51, 0, 0.6);
+}
+/* Adjust Subsections */
+.dark-mode .sub-section {
+background: rgba(250, 250, 250, 0.95);
+border: 1px solid #ff6600;
+box-shadow: 0 0 10px rgba(255, 102, 0, 0.4);
+color: #222;
+}
+/* Links in Light Mode */
+.dark-mode a {
+color: #b33; /* Dark red */
+text-decoration: none;
+transition: color 0.3s;
+}
+.dark-mode a:hover {
+color: red;
+text-decoration: underline;
+}
+/* Remove old static grid */
+
+body::before {
+content: none;
+}
+/* Add a full-screen particle effect */
+#particles-js {
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: -1;
+}
+/* Skills Toggle Buttons */
+.toggle-btn {
+background: cyan;
+color: black;
+padding: 10px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+margin: 10px 0;
+display: block;
+width: 100%;
+text-align: center;
+transition: background 0.3s ease;
+box-shadow: 0 0 8px cyan;
+}
+.toggle-btn:hover {
+background: blue;
+color: white;
+box-shadow: 0 0 15px blue;
+}
+.skill-content {
+display: none;
+padding: 10px;
+border: 1px solid cyan;
+
+box-shadow: 0 0 10px cyan;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+}
+/* Languages Section */
+.languages-container {
+display: flex;
+flex-direction: column;
+gap: 15px;
+width: 80%;
+margin: auto;
+}
+.language {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.progress-bar {
+width: 100%;
+height: 10px;
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+}
+.progress {
+height: 100%;
+background: linear-gradient(90deg, #ff007f, #ff6600, #00d4ff);
+transition: width 1.5s ease-in-out;
+border-radius: 10px;
+}
+.lang-level {
+font-size: 14px;
+color: white;
+
+margin-top: 5px;
+}
+/* Fix for long text (like email) overflowing */
+#contact ul {
+word-wrap: break-word;
+overflow-wrap: break-word;
+white-space: normal; /* Allow text to wrap */
+max-width: 90%; /* Prevent stretching */
+margin: auto; /* Center align */
+}
+margin-top: 20px;
+padding: 15px;
+border: 1px solid cyan;
+box-shadow: 0 0 10px cyan;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+width: 60%; /* Limit width to 60% of screen */
+max-width: 600px; /* Prevent it from becoming too wide on larger screens */
+margin-left: auto;
+margin-right: auto; /* Center align */
+text-align: left; /* Improve readability */
+}
+/* Adjust subsection text */
+.sub-section p, .sub-section ul {
+font-size: 14px; /* Reduce font size */
+line-height: 1.5; /* Improve readability */
+}
+/* Dark Mode */
+/* Softer Light Mode */
+.dark-mode {
+background: linear-gradient(180deg, #f2f2f2, #e6e6e6); /* Soft grayish-white */
+color: #222; /* Darker text for contrast */
+}
+/* Adjust Navigation for Light Mode */
+.dark-mode nav {
+background: rgba(245, 245, 245, 0.9);
+box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+}
+
+/* Adjust Headings for Visibility */
+.dark-mode h1 {
+background: linear-gradient(90deg, #ff6600, #ff3300);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+/* Adjust Buttons in Light Mode */
+.dark-mode button {
+background: #ff6600; /* Soft warm orange */
+color: white;
+box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+}
+.dark-mode button:hover {
+background: #ff3300;
+box-shadow: 0 0 15px rgba(255, 51, 0, 0.6);
+}
+/* Adjust Subsections */
+.dark-mode .sub-section {
+background: rgba(250, 250, 250, 0.95);
+border: 1px solid #ff6600;
+box-shadow: 0 0 10px rgba(255, 102, 0, 0.4);
+color: #222;
+}
+/* Links in Light Mode */
+.dark-mode a {
+color: #b33; /* Dark red */
+text-decoration: none;
+transition: color 0.3s;
+}
+.dark-mode a:hover {
+color: red;
+text-decoration: underline;
+}
+/* Remove old static grid */
+
+body::before {
+content: none;
+}
+/* Add a full-screen particle effect */
+#particles-js {
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: -1;
+}
+/* Skills Toggle Buttons */
+.toggle-btn {
+background: cyan;
+color: black;
+padding: 10px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+margin: 10px 0;
+display: block;
+width: 100%;
+text-align: center;
+transition: background 0.3s ease;
+box-shadow: 0 0 8px cyan;
+}
+.toggle-btn:hover {
+background: blue;
+color: white;
+box-shadow: 0 0 15px blue;
+}
+.skill-content {
+display: none;
+padding: 10px;
+border: 1px solid cyan;
+
+box-shadow: 0 0 10px cyan;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 5px;
+}
+/* Languages Section */
+.languages-container {
+display: flex;
+flex-direction: column;
+gap: 15px;
+width: 80%;
+margin: auto;
+}
+.language {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.progress-bar {
+width: 100%;
+height: 10px;
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+}
+.progress {
+height: 100%;
+background: linear-gradient(90deg, #ff007f, #ff6600, #00d4ff);
+transition: width 1.5s ease-in-out;
+border-radius: 10px;
+}
+.lang-level {
+font-size: 14px;
+color: white;
+
+margin-top: 5px;
+}
+/* Fix for long text (like email) overflowing */
+#contact ul {
+word-wrap: break-word;
+overflow-wrap: break-word;
+white-space: normal; /* Allow text to wrap */
+max-width: 90%; /* Prevent stretching */
+margin: auto; /* Center align */
+}
