@@ -34,6 +34,21 @@ nav ul li:hover {
 color: cyan;
 transform: scale(1.1);
 }
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: cyan;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
 /* Section Styling */
 section {
 
