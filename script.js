@@ -24,10 +24,10 @@ function showSubSection(sub) {
 // Internship & Workshop Details Toggle
 function showDetails(id) {
     const details = {
-        "intern-palo": "<p>Gained practical knowledge of cybersecurity concepts, tools, and techniques.</p>",
-        "intern-juniper": "<p>Worked on cloud networking solutions and learned the fundamentals of cloud technologies.</p>",
-        "intern-ai": "<p>Focused on integrating AI and IoT applications.</p>",
-        "workshop-iot": "<p>Focused on integrating IoT systems with machine learning applications.</p>"
+        "intern-palo": "<p>Gained practical knowledge of cybersecurity concepts, tools, and techniques.</p><a href='palo-alto.pdf' target='_blank'>View Certificate</a>",
+        "intern-juniper": "<p>Worked on cloud networking solutions and learned the fundamentals of cloud technologies.</p><a href='juniper.pdf' target='_blank'>View Certificate</a>",
+        "intern-ai": "<p>Focused on integrating AI and IoT applications.</p><a href='ai.pdf' target='_blank'>View Certificate</a>",
+        "workshop-iot": "<p>Focused on integrating IoT systems with machine learning applications.</p><a href='iot.pdf' target='_blank'>View Certificate</a>"
     };
 
     let detailsContainer;
