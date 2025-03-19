@@ -1,8 +1,8 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle, #0d0d0d, #1a1a1a);
-    color: white; /* Dark Charcoal for text */
+    background: radial-gradient(circle, #090c1b, #1a1a2e); /* Deep blue-black cosmic */
+    color: #e0e0e0; /* Light gray text for readability */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -14,21 +14,9 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 0 10px cyan;
+    background: rgba(10, 15, 30, 0.8);
+    box-shadow: 0 0 10px #00f2ff;
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-}
-/* Theme Toggle Button */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: cyan;
-    color: black;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 50%;
-    cursor: pointer;
 }
 
 nav ul {
@@ -46,7 +34,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    color: cyan;
+    color: #00f2ff;
     transform: scale(1.1);
 }
 
@@ -70,27 +58,27 @@ h1 {
     font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(90deg, cyan, blue);
+    background: linear-gradient(90deg, #00f2ff, #a066ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px cyan;
+    text-shadow: 0 0 15px #00f2ff;
 }
 
 /* Buttons */
 button {
-    background: cyan;
+    background: #00f2ff;
     color: black;
     padding: 12px 20px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px cyan;
+    box-shadow: 0 0 10px #00f2ff;
 }
 
 button:hover {
-    background: blue;
-    box-shadow: 0 0 15px blue;
+    background: #0088ff;
+    box-shadow: 0 0 15px #0088ff;
     color: white;
 }
 
@@ -99,80 +87,69 @@ button:hover {
     display: none;
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid cyan;
-    box-shadow: 0 0 10px cyan;
-    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00f2ff;
+    box-shadow: 0 0 10px #00f2ff;
+    background: rgba(10, 10, 30, 0.8);
     border-radius: 5px;
-    width: 60%; /* Limit width to 60% of screen */
-    max-width: 600px; /* Prevent it from becoming too wide on larger screens */
+    width: 60%;
+    max-width: 600px;
     margin-left: auto;
-    margin-right: auto; /* Center align */
-    text-align: left; /* Improve readability */
-}
-
-/* Adjust subsection text */
-.sub-section p, .sub-section ul {
-    font-size: 14px; /* Reduce font size */
-    line-height: 1.5; /* Improve readability */
+    margin-right: auto;
+    text-align: left;
 }
 
 /* Dark Mode */
 .dark-mode {
-    background: linear-gradient(180deg, #f2f2f2, #e6e6e6); /* Soft grayish-white */
-    color: #222; /* Darker text for contrast */
+    background: linear-gradient(180deg, #f0f0f5, #dcdce7); /* Soft grayish lavender */
+    color: #333; /* Dark gray for better contrast */
 }
 
 /* Adjust Navigation for Light Mode */
 .dark-mode nav {
-    background: rgba(245, 245, 245, 0.9);
-    box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
+    background: rgba(240, 240, 245, 0.9);
+    box-shadow: 0 0 10px rgba(120, 90, 150, 0.3);
 }
 
 /* Adjust Headings for Visibility */
 .dark-mode h1 {
-    background: linear-gradient(90deg, #ff6600, #ff3300);
+    background: linear-gradient(90deg, #9a73b5, #7a529e);  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Adjust Buttons in Light Mode */
 .dark-mode button {
-    background: #ff6600; /* Soft warm orange */
+    background: #9a73b5; /* Muted purple */
     color: white;
-    box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+    box-shadow: 0 0 8px rgba(146, 104, 187, 0.6);
 }
 
 .dark-mode button:hover {
-    background: #ff3300;
-    box-shadow: 0 0 15px rgba(255, 51, 0, 0.6);
+    background: #7a529e; /* Deep violet */
+    box-shadow: 0 0 15px rgba(122, 82, 158, 0.6);
 }
 
 /* Adjust Subsections */
 .dark-mode .sub-section {
-    background: rgba(250, 250, 250, 0.95);
-    border: 1px solid #ff6600;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.4);
-    color: #222;
+    background: rgba(250, 250, 255, 0.95);
+    border: 1px solid #9a73b5;
+    box-shadow: 0 0 10px rgba(146, 104, 187, 0.4);
+    color: #333;
 }
 
 /* Links in Light Mode */
 .dark-mode a {
-    color: #b33; /* Dark red */
+    color: #5a3d72; /* Soft plum */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .dark-mode a:hover {
-    color: red;
+    color: #7a529e;
     text-decoration: underline;
 }
 
-/* Remove old static grid */
-body::before {
-    content: none;
-}
-
-/* Add a full-screen particle effect */
+/* Full-screen Particle Effect */
 #particles-js {
     position: fixed;
     width: 100%;
@@ -180,9 +157,22 @@ body::before {
     z-index: -1;
 }
 
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #00f2ff;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 /* Skills Toggle Buttons */
 .toggle-btn {
-    background: cyan;
+    background: #00f2ff;
     color: black;
     padding: 10px;
     font-size: 16px;
@@ -193,25 +183,25 @@ body::before {
     width: 100%;
     text-align: center;
     transition: background 0.3s ease;
-    box-shadow: 0 0 8px cyan;
+    box-shadow: 0 0 8px #00f2ff;
 }
 
 .toggle-btn:hover {
-    background: blue;
+    background: #0088ff;
     color: white;
-    box-shadow: 0 0 15px blue;
+    box-shadow: 0 0 15px #0088ff;
 }
 
+/* Skills and Languages */
 .skill-content {
     display: none;
     padding: 10px;
-    border: 1px solid cyan;
-    box-shadow: 0 0 10px cyan;
-    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00f2ff;
+    box-shadow: 0 0 10px #00f2ff;
+    background: rgba(10, 10, 30, 0.8);
     border-radius: 5px;
 }
 
-/* Languages Section */
 .languages-container {
     display: flex;
     flex-direction: column;
@@ -242,17 +232,19 @@ body::before {
     border-radius: 10px;
 }
 
-.lang-level {
-    font-size: 14px;
-    color: white;
-    margin-top: 5px;
+.dark-mode .progress {
+    background: linear-gradient(90deg, #a083c9, #b39ddb, #c8aedf);
 }
 
-/* Fix for long text (like email) overflowing */
+.dark-mode .lang-level {
+    color: #333;
+}
+
+/* Fix for long text */
 #contact ul {
     word-wrap: break-word;
     overflow-wrap: break-word;
-    white-space: normal; /* Allow text to wrap */
-    max-width: 90%; /* Prevent stretching */
-    margin: auto; /* Center align */
-}
+    white-space: normal;
+    max-width: 90%;
+    margin: auto;
+        }
