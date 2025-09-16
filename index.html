@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavani Tamadapu - Portfolio</title>
+    <meta name="description" content="Portfolio of Pavani Tamadapu - B.Tech student with expertise in full-stack development, internships in cybersecurity, cloud networking, and AI.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="new.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <div id="particles-js"></div>
 
-    <nav>
+    <nav role="navigation" aria-label="Main Navigation">
         <ul>
-            <li onclick="showSection('home')">Home</li>
-            <li onclick="showSection('internships')">Internships</li>
-            <li onclick="showSection('workshops')">Workshops</li>
+            <li data-section="home" role="button" tabindex="0" class="active">Home</li>
+            <li data-section="internships" role="button" tabindex="0">Internships</li>
+            <li data-section="workshops" role="button" tabindex="0">Workshops</li>
+            <li data-section="projects" role="button" tabindex="0">Projects</li>
         </ul>
-        <button id="theme-toggle">🌙</button>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </nav>
 
     <!-- Home Section -->
@@ -26,11 +31,11 @@
         <p>Motivated B.Tech student with expertise in full-stack development.</p>
         
         <div class="home-menu">
-            <button onclick="showSubSection('about')">Profile Summary</button>
-            <button onclick="showSubSection('education')">Education</button>
-            <button onclick="showSubSection('skills')">Skills</button>
-            <button onclick="showSubSection('languages')">Languages</button>
-            <button onclick="showSubSection('contact')">Contact</button>
+            <button data-sub="about" aria-expanded="false">Profile Summary</button>
+            <button data-sub="education" aria-expanded="false">Education</button>
+            <button data-sub="skills" aria-expanded="false">Skills</button>
+            <button data-sub="languages" aria-expanded="false">Languages</button>
+            <button data-sub="contact" aria-expanded="false">Contact</button>
         </div>
 
         <div id="home-content">
@@ -44,7 +49,7 @@
 
             <div id="education" class="sub-section">
                 <ul>
-                    <li onclick="toggleSkillSection('cic')"><b>B.Tech:</b> Sasi Institute of Technology (2022-2026)</li>
+                    <li data-toggle="cic"><b>B.Tech:</b> Sasi Institute of Technology (2022-2026)</li>
                     <li><b>Intermediate:</b> Aditya Junior College (2020-2022)</li>
                     <li><b>SSC:</b> Bhashyam English Medium School (2019-2020)</li>
                 </ul>
@@ -57,14 +62,14 @@
             </div>
 
             <div id="skills" class="sub-section">
-                <button class="toggle-btn" onclick="toggleSkillSection('technical-skills')">Technical Skills</button>
+                <button class="toggle-btn" data-toggle="technical-skills" aria-expanded="false">Technical Skills</button>
                 <div id="technical-skills" class="skill-content">
                     <ul>
                         <li>Programming: C, Python, Java, HTML, CSS, JavaScript</li>
                     </ul>
                 </div>
 
-                <button class="toggle-btn" onclick="toggleSkillSection('soft-skills')">Soft Skills</button>
+                <button class="toggle-btn" data-toggle="soft-skills" aria-expanded="false">Soft Skills</button>
                 <div id="soft-skills" class="skill-content">
                     <ul>
                         <li>Problem-Solving</li>
@@ -109,13 +114,29 @@
                 </div>
             </div>
 
+            <!-- Contact Section with Icons -->
             <div id="contact" class="sub-section">
-                <ul>
-                    <li>Email: <a href="mailto:pavani.tamadapu18@gmail.com">pavani.tamadapu18@gmail.com</a></li>
-                    <li>Phone: <a href="tel:+918106033855">8106033855</a></li>
-                    <li>GitHub: <a href="https://github.com/pavani5253" target="_blank">GitHub profile</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/pavani-tamadapu-60989528a" target="_blank">LinkedIn Profile</a></li>
-                </ul>
+                <p>
+                    <a href="resume.pdf" class="button" download>Download Resume</a>
+                </p>
+                <div class="contact-icons">
+                    <a href="mailto:pavani.tamadapu18@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="tel:+918106033855" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone</span>
+                    </a>
+                    <a href="https://github.com/pavani5253" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pavani-tamadapu-60989528a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -124,9 +145,9 @@
     <section id="internships">
         <h2>Internships</h2>
         <ul>
-            <li onclick="showDetails('intern-palo')">Palo Alto Cybersecurity (Eduskills)</li>
-            <li onclick="showDetails('intern-juniper')">Juniper Networking Cloud (Eduskills)</li>
-            <li onclick="showDetails('intern-ai')">AI Internship (Skilldizire)</li>
+            <li data-detail="intern-palo" role="button" tabindex="0">Palo Alto Cybersecurity (Eduskills)</li>
+            <li data-detail="intern-juniper" role="button" tabindex="0">Juniper Networking Cloud (Eduskills)</li>
+            <li data-detail="intern-ai" role="button" tabindex="0">AI Internship (Skilldizire)</li>
         </ul>
         <div id="internship-details"></div>
     </section>
@@ -135,9 +156,24 @@
     <section id="workshops">
         <h2>Workshops</h2>
         <ul>
-            <li onclick="showDetails('workshop-iot')">IoT & Machine Learning (Spypro Security)</li>
+            <li data-detail="workshop-iot" role="button" tabindex="0">IoT & Machine Learning (Spypro Security)</li>
         </ul>
         <div id="workshop-details"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-filters" role="toolbar" aria-label="Project filters">
+            <button data-filter="all" class="active" aria-pressed="true">All</button>
+            <button data-filter="web" aria-pressed="false">Web</button>
+            <button data-filter="ai" aria-pressed="false">AI</button>
+        </div>
+        <ul>
+            <li data-detail="project-portfolio" data-category="web" role="button" tabindex="0">Personal Portfolio Website</li>
+            <li data-detail="project-fyp" data-category="ai" role="button" tabindex="0">Final Year Project <span class="badge" aria-label="In progress">In Progress</span></li>
+        </ul>
+        <div id="project-details"></div>
     </section>
 
     <script src="script.js"></script>
