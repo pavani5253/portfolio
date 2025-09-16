@@ -1,55 +1,27 @@
 function updateParticlesForTheme() {
-    // Check if the body has the "dark-mode" class
+    // Destroy existing instance before re-initializing
+    if (window.pJSDom && window.pJSDom.length) {
+        window.pJSDom[0].pJS.fn.vendors.destroypJS();
+        window.pJSDom = [];
+    }
+
     let isDarkMode = document.body.classList.contains("dark-mode");
 
-    // Initialize the particlesJS library with settings
     particlesJS("particles-js", {
         particles: {
-            number: {
-                value: 80,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: isDarkMode ? "#00ffff" : "#ff6600" // Cyan in dark mode, Orange in light mode
-            },
-            shape: {
-                type: "circle"
-            },
-            opacity: {
-                value: 0.6,
-                random: true
-            },
-            size: {
-                value: 3,
-                random: true
-            },
-            move: {
-                enable: true,
-                speed: 2,
-                direction: "none",
-                random: false,
-                straight: false
-            }
+            number: { value: isDarkMode ? 100 : 110, density: { enable: true, value_area: 1000 } },
+            color: { value: isDarkMode ? "#0ea5e9" : "#6b7280" },
+            shape: { type: "circle" },
+            opacity: { value: isDarkMode ? 0.55 : 0.5, random: true },
+            size: { value: isDarkMode ? 2.6 : 2.6, random: true },
+            move: { enable: true, speed: isDarkMode ? 2.2 : 2.0 },
+            line_linked: { enable: true, distance: 140, color: isDarkMode ? "#67e8f9" : "#94a3b8", opacity: isDarkMode ? 0.25 : 0.35, width: 1 }
         },
         interactivity: {
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: "repulse"
-                }
-            },
-            modes: {
-                repulse: {
-                    distance: 100,
-                    duration: 0.4
-                }
-            }
+            events: { onhover: { enable: true, mode: "repulse" } },
+            modes: { repulse: { distance: 120, duration: 0.35 } }
         }
     });
 }
 
-// Ensure particles are updated based on the current theme when the page loads
 document.addEventListener("DOMContentLoaded", updateParticlesForTheme);
