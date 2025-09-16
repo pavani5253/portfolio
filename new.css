@@ -1,8 +1,8 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle, #090c1b, #1a1a2e); /* Deep blue-black cosmic */
-    color: #e0e0e0; /* Light gray text for readability */
+    background: radial-gradient(circle, #090c1b, #1a1a2e);
+    color: #e0e0e0;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -13,10 +13,12 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px;
-    background: rgba(10, 15, 30, 0.8);
+    background: rgba(10, 15, 30, 0.55);
     box-shadow: 0 0 10px #00f2ff;
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    backdrop-filter: blur(8px);
 }
 
 nav ul {
@@ -24,6 +26,7 @@ nav ul {
     display: flex;
     gap: 20px;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -36,6 +39,24 @@ nav ul li {
 nav ul li:hover {
     color: #00f2ff;
     transform: scale(1.1);
+}
+
+/* Badge for certificate or extra info */
+.badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-size: 12px;
+    background: rgba(0, 242, 255, 0.15);
+    color: #00f2ff;
+    border: 1px solid rgba(0, 242, 255, 0.35);
+    border-radius: 999px;
+}
+
+.dark-mode .badge {
+    background: rgba(99, 102, 241, 0.12);
+    color: #4f46e5;
+    border: 1px solid rgba(79, 70, 229, 0.25);
 }
 
 /* Section Styling */
@@ -59,6 +80,7 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     background: linear-gradient(90deg, #00f2ff, #a066ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 15px #00f2ff;
@@ -72,6 +94,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     border: none;
+    border-radius: 6px;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px #00f2ff;
 }
@@ -89,63 +112,62 @@ button:hover {
     padding: 15px;
     border: 1px solid #00f2ff;
     box-shadow: 0 0 10px #00f2ff;
-    background: rgba(10, 10, 30, 0.8);
-    border-radius: 5px;
-    width: 60%;
+    background: rgba(10, 10, 30, 0.55);
+    border-radius: 8px;
+    width: 90%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    backdrop-filter: blur(8px);
 }
 
-/* Dark Mode */
+/* Light Mode (toggle class name is .dark-mode but styles are light) */
 .dark-mode {
-    background: linear-gradient(180deg, #f0f0f5, #dcdce7); /* Soft grayish lavender */
-    color: #333; /* Dark gray for better contrast */
+    background: linear-gradient(180deg, #f8fafc, #eef2f7),
+                radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,0.10), transparent 50%),
+                radial-gradient(800px 400px at 110% 20%, rgba(14,165,233,0.10), transparent 50%);
+    color: #0f172a;
 }
 
-/* Adjust Navigation for Light Mode */
 .dark-mode nav {
-    background: rgba(240, 240, 245, 0.9);
-    box-shadow: 0 0 10px rgba(120, 90, 150, 0.3);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
 }
 
-/* Adjust Headings for Visibility */
 .dark-mode h1 {
-    background: linear-gradient(90deg, #9a73b5, #7a529e);  
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Adjust Buttons in Light Mode */
 .dark-mode button {
-    background: #9a73b5; /* Muted purple */
-    color: white;
-    box-shadow: 0 0 8px rgba(146, 104, 187, 0.6);
+    background: #6366f1;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.35);
 }
 
 .dark-mode button:hover {
-    background: #7a529e; /* Deep violet */
-    box-shadow: 0 0 15px rgba(122, 82, 158, 0.6);
+    background: #4f46e5;
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
 }
 
-/* Adjust Subsections */
 .dark-mode .sub-section {
-    background: rgba(250, 250, 255, 0.95);
-    border: 1px solid #9a73b5;
-    box-shadow: 0 0 10px rgba(146, 104, 187, 0.4);
-    color: #333;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    color: #0f172a;
 }
 
-/* Links in Light Mode */
 .dark-mode a {
-    color: #5a3d72; /* Soft plum */
+    color: #2563eb;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.2s ease;
 }
 
 .dark-mode a:hover {
-    color: #7a529e;
+    color: #1d4ed8;
     text-decoration: underline;
 }
 
@@ -155,6 +177,11 @@ button:hover {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+/* Improve particle visibility on light background */
+.dark-mode #particles-js {
+    opacity: 1;
 }
 
 /* Theme Toggle Button */
@@ -184,6 +211,7 @@ button:hover {
     text-align: center;
     transition: background 0.3s ease;
     box-shadow: 0 0 8px #00f2ff;
+    border-radius: 6px;
 }
 
 .toggle-btn:hover {
@@ -202,11 +230,29 @@ button:hover {
     border-radius: 5px;
 }
 
+/* Light-mode overrides for skills readability */
+.dark-mode .toggle-btn {
+    background: #6366f1;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25);
+}
+
+.dark-mode .toggle-btn:hover {
+    background: #4f46e5;
+}
+
+.dark-mode .skill-content {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    color: #0f172a;
+}
+
 .languages-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -233,18 +279,200 @@ button:hover {
 }
 
 .dark-mode .progress {
-    background: linear-gradient(90deg, #a083c9, #b39ddb, #c8aedf);
+    background: linear-gradient(90deg, #60a5fa, #34d399, #a78bfa);
 }
 
 .dark-mode .lang-level {
     color: #333;
 }
 
-/* Fix for long text */
+/* Contact Info Fix for Long Text */
 #contact ul {
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
     max-width: 90%;
     margin: auto;
-        }
+}
+
+/* Contact grid */
+.contact-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+    max-width: 720px;
+    margin: 10px auto 0 auto;
+}
+
+.contact-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px 12px;
+    background: rgba(10, 10, 30, 0.55);
+    border: 1px solid rgba(0, 242, 255, 0.35);
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 242, 255, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contact-icons a i {
+    font-size: 24px;
+}
+
+.contact-icons a span {
+    font-size: 14px;
+    color: #e6faff;
+}
+
+.contact-icons a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 242, 255, 0.25);
+}
+
+.dark-mode .contact-icons a {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.dark-mode .contact-icons a span {
+    color: #0f172a;
+}
+
+/* Active nav state */
+nav ul li.active {
+    color: #00f2ff;
+    text-decoration: underline;
+}
+
+/* De-bullet all section lists for a cleaner look */
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Project filters */
+.project-filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0 20px 0;
+}
+
+.project-filters button {
+    background: #0ea5e9;
+}
+
+.project-filters button.active {
+    background: #0088ff;
+    color: #fff;
+}
+
+/* Clickable affordances and focus styles */
+[data-detail], [data-toggle], nav ul li {
+    cursor: pointer;
+}
+
+[data-detail]:hover, [data-toggle]:hover, nav ul li:hover {
+    text-decoration: underline;
+}
+
+[data-detail]:focus-visible, [data-toggle]:focus-visible, nav ul li:focus-visible, .project-filters button:focus-visible, .home-menu button:focus-visible, #theme-toggle:focus-visible {
+    outline: 2px solid #00f2ff;
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+/* Selected list item highlight */
+[data-detail].selected {
+    background: rgba(0, 242, 255, 0.08);
+    border: 1px solid rgba(0, 242, 255, 0.35);
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.dark-mode [data-detail].selected {
+    background: rgba(79, 70, 229, 0.08);
+    border: 1px solid rgba(79, 70, 229, 0.35);
+}
+
+/* Detail card styling */
+#internship-details, #workshop-details, #project-details {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid rgba(0, 242, 255, 0.35);
+    background: rgba(10, 10, 30, 0.55);
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.35);
+    border-radius: 10px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.dark-mode #internship-details, .dark-mode #workshop-details, .dark-mode #project-details {
+    border: 1px solid #e5e7eb;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.detail-title {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #e0faff;
+}
+
+.dark-mode .detail-title {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ------------------- */
+/* RESPONSIVE DESIGN */
+/* ------------------- */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    nav ul {
+        gap: 12px;
+    }
+    nav ul li {
+        font-size: 16px;
+    }
+    button, .toggle-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 6px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    section {
+        padding: 30px 10px;
+    }
+}
